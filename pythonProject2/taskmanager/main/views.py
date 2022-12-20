@@ -92,6 +92,8 @@ def registrationRe(request):
 @csrf_exempt
 def profileData(request):#
     if (request.method == 'POST'):
+        print(request.POST["name"])
+        print("tytytytyytytytyyt")
         people.people_add(request)
         return JsonResponse({'status' : True})
     return JsonResponse({"status": False})
