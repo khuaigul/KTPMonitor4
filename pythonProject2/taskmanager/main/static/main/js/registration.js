@@ -80,6 +80,14 @@ function send_profile_data()
 	let datebirth = document.querySelectorAll("#birthdate > input");
 	let school = document.querySelectorAll("#school > input");
 	let form = document.querySelectorAll("#form > input");
+	
+	lastname = lastname[0].value;
+	firstname = firstname[0].value;
+	secondname = secondname[0].value;
+	nickName = nickname[0].value;
+	datebirth = datebirth[0].value;
+	school = school[0].value;
+	form = form[0].value;
 
 	var xhr = new XMLHttpRequest();
 	var params = 'nickname=' + encodeURIComponent(nickname) +'&surname=' + encodeURIComponent(lastname) + "&name=" + encodeURIComponent(firstname) + "&secondname=" + encodeURIComponent(secondname) + "&school=" + encodeURIComponent(school) + "&form=" + encodeURIComponent(form) + "&datebirth=" + encodeURIComponent(datebirth);
