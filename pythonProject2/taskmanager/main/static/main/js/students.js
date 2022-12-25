@@ -98,7 +98,6 @@ function show_student(student_info)
 	make_info_element(info["school"], "Школа");
 	make_info_element(info["form"], "Класс");
 }
-
 function set_new_div(name, div)
 {
 	var params = 'nickname=' + encodeURIComponent(name) + '&div=' + encodeURIComponent(div);
@@ -110,6 +109,7 @@ function set_new_div(name, div)
 		else
 		{
 			console.log(xhr.responseText)
+			document.location="students";
 		}
 	}
 	xhr.open("POST", 'http://127.0.0.1:8000/сhangeDiv?', true);
@@ -129,7 +129,6 @@ function save_division_update()
 		if (sel.value != students["students"][i]["div"])	
 			set_new_div(nickname, sel.value);
 	}
-	document.location="students";
 }
 
 
